@@ -14,7 +14,3 @@ enableGitInfo = true
 [outputs]
   home = ["HTML", "RSS","JSON"]
 
-# Site logo
-[logo]
-  lightMode = "images/logo.png"
-  darkMode = "images/logo.png"
