@@ -1,5 +1,5 @@
 ---
-title: "MAXLAB Devices Guide"
+title: "MAXLAB Devices Guides"
 weight: 1
 ---
 
