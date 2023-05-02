@@ -4,7 +4,6 @@ weight: 1
 url: "docs/edge-ai-tokay-lite"
 ---
 
-
 ![Tokay Lite: Low Power ESP32 Edge AI Camera](/images/tokay-lite/edge-ai-angle.jpeg)
 
 ## Product Description
