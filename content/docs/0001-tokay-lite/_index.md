@@ -32,11 +32,15 @@ image processing data.
 
 ## Tokay Lite Components
 
-{{< tip "todo" >}}
-1. add diagram with components
+{{< tip "warning" >}}
+This section is in progress
 {{< /tip >}}
 
 ## PCB Dimensions
+
+{{< tip "warning" >}}
+This section is in progress
+{{< /tip >}}
 
 ## Ordering Samples
 
