@@ -1,43 +1,163 @@
 +++
-description = "Know Your Tokay Camera Better"
+description = "Building and Flashing Firmware"
 title = "Building and Flashing Firmware"
 weight = 3
 url = "docs/edge-ai-tokay-lite/firmware"
 +++
 
-## Cloning Firmware Repository
+This page describes how to setup a process to build and flash custom
+firmware for Tokay Lite cameras.
+
+## Necessary Preparations
+
+First and foremost, you need to clone the Tokay Lite firmare repository.
+The repositry can be found on GitHub: https://github.com/maxlab-io/tokay-lite-sdk
+and be cloned as follows:
 
 ```bash
 git clone https://github.com/maxlab-io/tokay-lite-sdk.git
 ```
 
-## Setup ESP-IDF
+The firmware is based on [ESP-IDF framework](https://www.espressif.com/en/products/sdks/esp-idf),
+so in order to proceed with builds, the ESP-IDF framework must be either
+locally installed or used directly from Docker images.
 
-The firmware is based on ESP-IDF v5.0, you can either install it locally, or use a pre-built docker image
-by Espressif as your build environment (preferred, see below).
+It is recommended to use Docker, since it reduces the dependency mess.
+However, if you still want to install ESP-IDF locally, skip the Docker
+installation section and jump right to [building firmware locally guide](#build-and-flash-using-local-esp-idf-installation)
 
-## Building Firmware
 
-To build the firmware with docker image, run this from the root directory of the repository:
+## Build and Flash Trought Docker
 
-```bash
-docker run -it --rm -v $PWD:/project -w /project espressif/idf:v5.0 idf.py build -C webserver
-```
+### Building Firmware
 
-## Flashing Firmware
+1. Make sure the repository is cloned and step into the root directory of it:
 
-The firmware is flashed via a USB using the built-in USB-CDC interface of ESP32-S3.
-To flash the device, just plug the USB cable, and hold the PWR button to keep the device powered on.
-Notice the /dev/ttyACMx device showing up in the system, and plug it into the command below instead of `<USB-device-path>`.
+    ```bash
+    cd tokay-lite-sdk
+    ```
 
-```bash
-docker run -it --device=<USB-device-path>:/dev/ttyACM0 --rm -v $PWD:/project -w /project espressif/idf:v5.0 idf.py flash -C webserver
-```
+1. Proceed with building the firmware using Docker image:
+
+    ```bash
+    docker run -it --rm -v $PWD:/project -w /project espressif/idf:v5.0 idf.py build -C webserver
+    ```
+
+### Flashing Firmware
+
+1. Before flashing Tokay Lite, assure that USB-C is connected.
+
+1. Hold the PWR button to wakeup the device. The firmware will open the USB port
+   using the built-in USB-CDC interface of ESP32-S3.
+
+1. If you're on Linux, check that `/dev/ttyACM*` USB port is showing up in the
+   system:
+
+    ```bash
+
+    ls -l /dev/ttyACM*
+
+    crw-rw----+ 1 root root 166, 0 May  4 20:57 /dev/ttyACM0
+
+    ```
+1. Run the following command, replacing `<TTY-USB-PATH>` with the tty path
+   discovered during previous step.
+
+    ```bash
+    docker run -it --device=<TTY-USB-PATH>:/dev/ttyACM0 --rm -v $PWD:/project -w /project espressif/idf:v5.0 idf.py flash -C webserver
+
+    ```
+
+   The flashing should succeed now.
+
+## Build and Flash Using Local ESP-IDF Installation
+
+### Setup ESP-IDF
+
+{{< tip info >}}
+
+The Tokay Lite firmware is compatible only with v5.0 of ESP-IDF.
+Make sure you install correct version!
+
+{{< /tip >}}
+
+In order to isntall ESP-IDF, please follow [the official Espressif guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/#installation).
+
+
+You also need to be familiar about building and developing projects using ESP-IDF
+tools, so it is stronly advised to complete [the Build Your First Project Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#build-your-first-project)
+
+After ESP-IDF installation is complete, return back and proceed with
+following steps.
+
+### Building And Flashing Firmware
+
+1. Make sure the repository is cloned and step into the root directory of it:
+
+    ```bash
+    cd tokay-lite-sdk
+    ```
+
+1. Build the firmware directly using `idf.py`:
+
+    ```bash
+    idf.py build -C webserver
+    ```
+
+### Flashing Firmware
+
+1. Before flashing Tokay Lite, assure that USB-C is connected.
+
+1. Hold the PWR button to wakeup the device. The firmware will open the USB port
+   using the built-in USB-CDC interface of ESP32-S3.
+
+1. If you're on Linux, check that `/dev/ttyACM*` USB port is showing up in the
+   system:
+
+    ```bash
+
+    ls -l /dev/ttyACM*
+
+    crw-rw----+ 1 root root 166, 0 May  4 20:57 /dev/ttyACM0
+
+    ```
+1. Run the following command, replacing `<TTY-USB-PATH>` with the tty path
+   discovered during previous step.
+
+    ```bash
+    idf.py -p <TTY-USB-PATH> flash -C webserver
+
+    ```
+
+   The flashing should succeed now.
 
 ## Next Steps
 
-Once flashed, press and hold the PWR button for 3 seconds and notice the `tokay-lite` WiFi access point showing up.
-Connect to that AP and point your browser to http://tokay-lite.local page to supply your WiFi network credentials.
-After pressing the `Submit` button, the camera will connect to your local network and you can access the web dashboard
-through the same http://tokay-lite.local link.
-NOTE: this require MDNS support on your PC (this is usually enabled by default on most mainstream systems).
+1. Once flashed, press and hold the PWR button for 3 seconds and notice
+   the `tokay-lite` WiFi access point showing up.
+
+1. Connect to the `tokay-lite` WiFi access point and point your browser to
+   `http://tokay-lite.local` page to .
+
+   {{< tip info >}}
+
+   The hostname `tokay-lite.local` is resolvable only if mDNS discovery
+   is enabled on your device. Usually that's the case on mainstream systems,
+   but if your host system lacks mDNS support, use following address:
+
+   `http://192.168.4.1`
+
+   {{< /tip >}}
+
+1. Supply your WiFi network credentials and press the `Submit` button.
+   The camera will connect to your local network.
+
+   Assuming your host and the camera are on the same network, you can access the Tokay web dashboard through the same `http://tokay-lite.local` link.
+
+## Troubleshooting
+
+{{< tip warning >}}
+
+This section is in progress
+
+{{< /tip >}}
