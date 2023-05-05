@@ -18,6 +18,14 @@ and be cloned as follows:
 git clone https://github.com/maxlab-io/tokay-lite-sdk.git
 ```
 
+The firmware requires a couple of submodules to be updated, so you
+need to proceed with cloning them as well:
+
+```bash
+cd tokay-lite-sdk
+git submodule update --init --recursive
+```
+
 The firmware is based on [ESP-IDF framework](https://www.espressif.com/en/products/sdks/esp-idf),
 so in order to proceed with builds, the ESP-IDF framework must be either
 locally installed or used directly from Docker images.
