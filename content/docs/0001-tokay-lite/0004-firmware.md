@@ -139,17 +139,17 @@ following steps.
 1. Connect to the `tokay-lite` WiFi access point and point your browser to
    `http://tokay-lite.local` page to .
 
-   {{< tip info >}}
+{{< tip info >}}
 
-   The hostname `tokay-lite.local` is resolvable only if mDNS discovery
-   is enabled on your device. Usually that's the case on mainstream systems,
-   but if your host system lacks mDNS support, use following address:
+The hostname `tokay-lite.local` is resolvable only if mDNS discovery
+is enabled on your device. Usually that's the case on mainstream systems,
+but if your host system lacks mDNS support, use following address:
 
-   `http://192.168.4.1`
+`http://192.168.4.1`
 
-   {{< /tip >}}
+{{< /tip >}}
 
-1. Supply your WiFi network credentials and press the `Submit` button.
+3. Supply your WiFi network credentials and press the `Submit` button.
    The camera will connect to your local network.
 
    Assuming your host and the camera are on the same network, you can access the Tokay web dashboard through the same `http://tokay-lite.local` link.
