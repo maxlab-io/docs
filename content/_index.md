@@ -11,18 +11,17 @@ title = "Projects"
 {{< block "grid-2" >}}
 {{< column >}}
 
-# TODO: MAXLAB Documentation Header
-
-TODO: MAXLAB documentation description
+# MAXLAB.IO Documentation
 
 {{< tip "warning" >}}
 This documentation is in draft stage
 {{< /tip >}}
 
-{{< button "docs/compose/" "Read the Docs" >}}
+{{< button "docs/" "Read the Docs" >}}
 {{< /column >}}
 
 {{< column >}}
-![diy](/images/scribble.jpg)
+![MAXLAB.IO Product Design Photo](/images/maxlab_product_design.jpg)
 {{< /column >}}
+
 {{< /block >}}

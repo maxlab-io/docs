@@ -1,6 +1,6 @@
 +++
 description = "Camera Hardware Design and Schematics"
-title = "Design Files"
+title = "Design Files and Schematics"
 weight = 3
 url = "docs/edge-ai-tokay-lite/design-files"
 +++

@@ -1,6 +1,6 @@
 +++
 description = "Know Your Tokay Camera Better"
-title = "Know Your Camera"
+title = "Know Your Device"
 weight = 2
 url = "docs/edge-ai-tokay-lite/know-your-camera"
 +++

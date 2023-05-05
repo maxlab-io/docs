@@ -23,11 +23,11 @@ This section is in-progress
 This section is in-progress
 {{< /tip >}}
 
-{{< tip "todo" >}}
+<!--
 1. expected gui screenshots
 1. expected console screenshots
 1. expected LED operation
-{{< /tip >}}
+-->
 
 ## Next Steps
 

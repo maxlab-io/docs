@@ -3,5 +3,8 @@ title: "MAXLAB Devices Guides"
 weight: 1
 ---
 
+{{< tip warning >}}
 
-TODO: describe maxlab docs structure, give some links, explain what devices are supported by this docs
+This page is under construction
+
+{{< /tip >}}
