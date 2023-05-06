@@ -9,7 +9,8 @@ enableRobotsTXT = true
 theme = "compose"
 enableGitInfo = true
 
-googleAnalytics = "G-VL8YF5QWS1"
+[params]
+gtag_id = "G-VL8YF5QWS1"
 
 # disableKinds = ["taxonomy", "taxonomyTerm"]
 
