@@ -14,9 +14,13 @@ title = "Projects"
 
 # MAXLAB.IO Documentation
 
-{{< tip "warning" >}}
-This documentation is in draft stage
-{{< /tip >}}
+We are an Edmonton and Vancouver-based turn-key firm for the product, hardware, and embedded design in the field of computer vision hardware and edge
+artificial intellegence.
+
+We also design and manufacture few of our own devices and provide the firmware
+for them.
+
+Here, you can find the most recent documentation and guides on our devices.
 
 {{< button "docs/" "Read the Docs" >}}
 {{< /column >}}
