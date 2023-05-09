@@ -38,12 +38,19 @@ This section is in progress
 
 ## PCB Dimensions
 
-{{< tip "warning" >}}
-This section is in progress
-{{< /tip >}}
+Tokay LITE is packed into 70x70mm with M3 mounting holes at each corner,
+as can be seen from a following drawing:
+
+![Tokay AI Camera dimensions](/assets/tokay-lite/ai-camera-rev2-dimensions.png)
 
 ## Ordering Samples
 
 For information about ordering samples please proceed to [MAXLAB Tokay Lite product page](https://maxlab.io/store/edge-ai-camera/).
+
+## Next Steps
+
+To know more about the camera, proceed with the "Getting Started Guide" by
+clicking the button below, or just select the documentation page of interest
+in the menu.
 
 {{< button "./getting-started/" "Getting Started Guide" >}}

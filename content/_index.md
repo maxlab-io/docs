@@ -22,6 +22,10 @@ for them.
 
 Here, you can find the most recent documentation and guides on our devices.
 
+You reach us via [hi@maxlab.io email](mailto:hi@maxlab.io) or via website using [Contact Us form](https://maxlab.io/contact/)
+
+If you like our products or just want to stay in touch, make sure you're following [the MAXLAB.IO LinkedIn page](https://www.linkedin.com/company/maxlab-io) to get latest news and updates.
+
 {{< button "docs/" "Read the Docs" >}}
 {{< /column >}}
 
