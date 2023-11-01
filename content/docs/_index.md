@@ -3,8 +3,13 @@ title: "MAXLAB Devices Guides"
 weight: 1
 ---
 
-{{< tip warning >}}
+Welcome to MAXLAB's device guides!
 
-This page is under construction
+These resources are here to assist you in setting up and getting the most out
+of our hardware offerings.
 
-{{< /tip >}}
+You expect to find here step-by-step instructions on configuring your
+development environment and using our devices effectively.
+
+Use the navigation menu to explore different topics and find the information
+you need for your specific MAXLAB device.
