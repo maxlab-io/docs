@@ -32,9 +32,7 @@ image processing data.
 
 ## Tokay Lite Components
 
-{{< tip "warning" >}}
-This section is in progress
-{{< /tip >}}
+![Tokay Components](/images/tokay-lite/tokay-components.jpg)
 
 ## PCB Dimensions
 
