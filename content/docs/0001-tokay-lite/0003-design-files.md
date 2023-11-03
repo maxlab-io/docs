@@ -19,32 +19,10 @@ url = "docs/edge-ai-tokay-lite/design-files"
 
 * [Schematics in PDF format](/assets/tokay-lite/ai-camera-rev2-schematics.pdf)
 
-## BOM
 
-{{< tip "warning" >}}
-This section is in-progress
-{{< /tip >}}
+## KiCAD Project and Manufacturing Files
 
-## PCBA
+Set of KiCAD project files, as well as BOM and other useful bits
+of information located on [Tokay Lite official GitHub page](https://github.com/maxlab-io/tokay-lite-pcb).
 
-{{< tip "warning" >}}
-This section is in-progress
-{{< /tip >}}
 
-## KiCAD Project
-
-{{< tip "warning" >}}
-This section is in-progress
-{{< /tip >}}
-
-## Enclosure Design Files
-
-{{< tip "warning" >}}
-This section is in-progress
-{{< /tip >}}
-
-## Next Steps
-
-{{< tip "warning" >}}
-This section is in-progress
-{{< /tip >}}

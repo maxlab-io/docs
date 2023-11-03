@@ -160,7 +160,7 @@ operation.
 
 ## Next Steps
 
-{{< tip "warning" >}}
-This section is in-progress
-{{< /tip >}}
+If you feel you're familiar enough with the camera operation, consider jumping
+into [the firmware development](../firmware) or proceed with the seelction of
+options from the navbar.
 
