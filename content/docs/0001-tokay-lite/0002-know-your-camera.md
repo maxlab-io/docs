@@ -146,8 +146,6 @@ When enabled, the PIR senson is also used as a wakeup source for the camera.
 
 ## Ambient Light Sensor
 
-## ALS Sensor
-
 An Ambient Light Sensor (ALS) is integrated into the camera to measure the ambient
 light level in its surroundings. The ALS sensor provides valuable information
 about the lighting conditions, enabling the camera to adjust its settings for
