@@ -20,9 +20,7 @@ or any other USB power source using a USB-C cable. Make sure you
 use a stable power supply capable of delivering up to 1A to the
 camera, enabling it to function efficiently.
 
-![Tokay Lite USB Port](/images/placeholder.png)
-
-<!-- -->
+![Tokay Lite USB Port](/images/tokay-lite/usb-port.png)
 
 After plugging in the USB cable, it's time to activate the
 camera.
@@ -32,14 +30,14 @@ button as shown below. When you do this, the camera will
 transition from a standby state to operational mode, ready to
 be further configured.
 
-![Tokay Lite Pressing A Button to Wakeup](/images/placeholder.png)
+![Tokay Lite Pressing A Button to Wakeup](/images/tokay-lite/btn-wakeup.png)
 
 To confirm that the camera is indeed active, observe the blue
 `USER LED` blinking every second. This visual cue is essential to
 verify that the camera is ready for next steps, namely, WiFi
 configuration.
 
-![Tokay Lite User LED is blinking](/images/placeholder.png)
+![Tokay Lite User LED is blinking](/images/tokay-lite/user-led.png)
 
 ## Connecting to WiFi
 
