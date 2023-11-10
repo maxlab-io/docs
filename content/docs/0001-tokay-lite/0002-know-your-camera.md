@@ -84,11 +84,7 @@ Here's an overview of the different buttons on the camera:
 
 ## Power Management
 
-{{< tip "warning" >}}
-This section is in-progress
-{{< /tip >}}
-
-![Tokay Camera Power Management Diagram](/images/placeholder.png)
+{{< picture "tokay-lite/tokay-power-management-light.png" "tokay-lite/tokay-power-management.png" "Tokay Camera Power Management Diagram" >}}
 
 > Explain power management:
 > * External RTC connected to the power stage - in controls DC-DC enable pin, specifically
