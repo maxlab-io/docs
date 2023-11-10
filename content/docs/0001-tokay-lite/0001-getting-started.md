@@ -39,50 +39,37 @@ configuration.
 
 ![Tokay Lite User LED is blinking](/images/tokay-lite/user-led.png)
 
-## Connecting to WiFi
+## Configuring the WiFi Connection
 
 When Tokay Lite shipped from the factory, it lacks any WiFi
 credentials. The camera doesn't come pre-programmed to connect to
 your home network. Therefore, it's imperative to instruct the
 camera about your WiFi environment. This process is achieved
 through a straightforward trick of connecting to the camera own
-AP first.
+AP first:
 
-To do so, locate the Camera WiFi network in your device's
-available networks list. The camera network is named as "Tokay
-AP".
+1. Locate the Camera WiFi network in your device's
+    available networks list. The camera network is named as **"Tokay AP"**.
 
-![Tokay WiFi List](/images/placeholder.png)
+1. Connect to the network to establish a direct connection between
+    your device and the camera. Once connected to the Camera WiFi,
+    open your web browser and navigate to the camera WiFi configuration page.
 
-Connect to this network to establish a direct connection between
-your device and the camera.
+    If your device supports mDNS, then use http://tokay.local as web
+    page address. If that fails or your devices isn't mDNS-aware, use
+    direct IP address: http://192.168.4.1
 
-Once connected to the Camera WiFi, open your web browser and
-navigate to the camera WiFi configuration page.
+1. Using the WiFi configuration page, input your home WiFi credentials.
+    Upon doing this, the camera will store these credentials, enabling it to
+    connect to your home network. To confirm that the camera has successfully
+    connected to your WiFi network, observe the `USER LED`.
 
-If your device supports mDNS, then use http://tokay.local as web
-page address. If that fails or your devices isn't mDNS-aware, use
-direct IP address: http://192.168.4.1
+    During the connection, the LED will blink rapidly.
 
-This will bring up the camera's web-based configuration page as
-shown below, where you can input your home WiFi credentials.
-
-![Tokay WiFi Connect Page](/images/placeholder.png)
-
-Upon doing this, the camera will store these credentials,
-enabling it to connect to your home network.
-
-To confirm that the camera has successfully connected to your
-WiFi network, observe the `USER LED`.
-
-During the connection, the LED will blink rapidly.
-
-When the camera is connected, the `USER LED` will stay
-permanently ON. This visual cue is essential to verify that the
-camera is now online and ready to perform tasks over the WiFi
-connection.
-
-![Tokay WiFi Connect Page](/images/placeholder.png)
+1. Check the LED after a short period of time. When the camera is connected,
+    the `USER LED` will stay permanently ON. This visual cue is essential to
+    verify that the camera is now online and ready to perform tasks over the WiFi
+    connection.
 
 ## Checking Camera Operation
 
@@ -93,7 +80,8 @@ identify each other on the local network without the need for a
 centralized DNS server. This is particularly useful for locating
 the camera's web-based configuration interface.
 
-To check your camera's operation, follow these steps open your web browser and navigate to http://tokay.local.
+To check your camera's operation, follow these steps open your
+web browser and navigate to http://tokay.local.
 
 In most cases, you can access the camera's web-based
 configuration page by simply entering "tokay.local" in your
@@ -109,7 +97,7 @@ router's settings. This IP address can be used in place of
 
 {{< /tip >}}
 
-![Tokay Configuration page](/images/placeholder.png)
+![Tokay Configuration page](/images/tokay-lite/tokay-mainpage.jpg)
 
 Upon reaching the camera's configuration page, you can confirm
 that the camera is operational by verifying its settings and
