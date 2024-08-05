@@ -68,6 +68,10 @@ installation section and jump right to [building firmware locally guide](#build-
     crw-rw----+ 1 root root 166, 0 May  4 20:57 /dev/ttyACM0
 
     ```
+
+1. **Hold the PWR button again. Do not release the button until the flashing process
+   is complete**
+
 1. Run the following command, replacing `<TTY-USB-PATH>` with the tty path
    discovered during previous step.
 
@@ -76,7 +80,7 @@ installation section and jump right to [building firmware locally guide](#build-
 
     ```
 
-   The flashing should succeed now.
+   The flashing should succeed now, you can release the PWR button
 
 ## Build and Flash Using Local ESP-IDF Installation
 

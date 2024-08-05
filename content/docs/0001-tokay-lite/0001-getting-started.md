@@ -32,7 +32,7 @@ be further configured.
 
 ![Tokay Lite Pressing A Button to Wakeup](/images/tokay-lite/btn-wakeup.png)
 
-To confirm that the camera is indeed active, observe the blue
+To confirm that the camera is indeed active, observe the red
 `USER LED` blinking every second. This visual cue is essential to
 verify that the camera is ready for next steps, namely, WiFi
 configuration.
