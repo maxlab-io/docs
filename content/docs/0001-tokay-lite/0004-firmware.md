@@ -8,7 +8,7 @@ url = "docs/edge-ai-tokay-lite/firmware"
 This page describes how to setup a process to build and flash custom
 firmware for Tokay Lite cameras.
 
-## Necessary Preparations
+## Necessary Preparations {#preparations}
 
 First and foremost, you need to clone the Tokay Lite firmare repository.
 The repositry can be found on GitHub: https://github.com/maxlab-io/tokay-lite-sdk
@@ -30,59 +30,12 @@ The firmware is based on [ESP-IDF framework](https://www.espressif.com/en/produc
 so in order to proceed with builds, the ESP-IDF framework must be either
 locally installed or used directly from Docker images.
 
-It is recommended to use Docker, since it reduces the dependency mess.
-However, if you still want to install ESP-IDF locally, skip the Docker
-installation section and jump right to [building firmware locally guide](#build-and-flash-using-local-esp-idf-installation)
+It is recommended to use Docker on Linux, since it reduces the dependency mess.
+However, if you still want to install ESP-IDF locally or you have troubles
+installing Docker on MacOS, skip the Docker installation section and jump right
+to [building firmware locally guide](#esp-idf-native)
 
-
-## Build and Flash Trought Docker
-
-### Building Firmware
-
-1. Make sure the repository is cloned and step into the root directory of it:
-
-    ```bash
-    cd tokay-lite-sdk
-    ```
-
-1. Proceed with building the firmware using Docker image:
-
-    ```bash
-    docker run -it --rm -v $PWD:/project -w /project espressif/idf:v5.0 idf.py build -C webserver
-    ```
-
-### Flashing Firmware
-
-1. Before flashing Tokay Lite, assure that USB-C is connected.
-
-1. Hold the PWR button to wakeup the device. The firmware will open the USB port
-   using the built-in USB-CDC interface of ESP32-S3.
-
-1. If you're on Linux, check that `/dev/ttyACM*` USB port is showing up in the
-   system:
-
-    ```bash
-
-    ls -l /dev/ttyACM*
-
-    crw-rw----+ 1 root root 166, 0 May  4 20:57 /dev/ttyACM0
-
-    ```
-
-1. **Hold the PWR button again. Do not release the button until the flashing process
-   is complete**
-
-1. Run the following command, replacing `<TTY-USB-PATH>` with the tty path
-   discovered during previous step.
-
-    ```bash
-    docker run -it --device=<TTY-USB-PATH>:/dev/ttyACM0 --rm -v $PWD:/project -w /project espressif/idf:v5.0 idf.py flash -C webserver
-
-    ```
-
-   The flashing should succeed now, you can release the PWR button
-
-## Build and Flash Using Local ESP-IDF Installation
+## Build and Flash Using Local ESP-IDF Installation {#esp-idf-native}
 
 ### Setup ESP-IDF
 
@@ -104,13 +57,10 @@ following steps.
 
 ### Building And Flashing Firmware
 
-1. Make sure the repository is cloned and step into the root directory of it:
+1. Make sure the repository is cloned and submodules are updated.
+   See [Necessary Preparation section](#preparations) for details.
 
-    ```bash
-    cd tokay-lite-sdk
-    ```
-
-1. Build the firmware directly using `idf.py`:
+   1. Build the firmware directly using `idf.py`:
 
     ```bash
     idf.py build -C webserver
@@ -142,6 +92,68 @@ following steps.
     ```
 
    The flashing should succeed now.
+
+## Build and Flash Via Docker
+
+   {{< tip "warning" >}}
+
+   Docker installation may not work on all MacOS systems. If you're using Macbook
+   as a development platform, it's recommended to install ESP-IDF and
+   [build Tokay Lite firmware natively](#esp-idf-native).
+
+   {{< /tip >}}
+
+### Installing Docker
+
+   Before building the firmware, you need to install Docker on your host.
+   Please refer to official Docker docs to figure out how to do it:
+
+   * [MacOS guide](https://docs.docker.com/desktop/install/mac-install/)
+   * [Linux guide](https://docs.docker.com/desktop/install/linux-install/)
+   * [Windows guide](https://docs.docker.com/desktop/install/windows-install/)
+
+   ### Building Firmware
+
+   1. Make sure the repository is cloned and submodules are updated.
+      See [Necessary Preparation section](#preparations) for details.
+
+   1. Proceed with building the firmware using Docker image:
+
+       ```bash
+       docker run -it --rm -v $PWD:/project -w /project espressif/idf:v5.0 idf.py build -C webserver
+       ```
+
+### Flashing Firmware
+
+   1. Before flashing Tokay Lite, assure that USB-C is connected.
+
+   1. Hold the PWR button to wakeup the device. The firmware will open the USB port
+      using the built-in USB-CDC interface of ESP32-S3.
+
+   1. If you're on Linux, check that `/dev/ttyACM*` USB port is showing up in the
+      system:
+
+       ```bash
+
+       ls -l /dev/ttyACM*
+
+       crw-rw----+ 1 root root 166, 0 May  4 20:57 /dev/ttyACM0
+
+       ```
+
+   1. **Hold the PWR button again. Do not release the button until the flashing process
+      is complete**
+
+   1. Run the following command, replacing `<TTY-USB-PATH>` with the tty path
+      discovered during previous step.
+
+       ```bash
+       docker run -it --device=<TTY-USB-PATH>:/dev/ttyACM0 --rm -v $PWD:/project -w /project espressif/idf:v5.0 idf.py flash -C webserver
+       ```
+
+      The flashing should succeed now, you can release the PWR button
+
+## Updating Firmware from Binaries
 
 ## Next Steps
 

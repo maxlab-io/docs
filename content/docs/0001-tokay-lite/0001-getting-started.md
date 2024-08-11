@@ -84,7 +84,7 @@ To check your camera's operation, follow these steps open your
 web browser and navigate to http://tokay.local.
 
 In most cases, you can access the camera's web-based
-configuration page by simply entering "tokay.local" in your
+configuration page by simply entering "tokay-lite.local" in your
 browser's address bar. This will direct you to the camera's
 settings interface.
 
