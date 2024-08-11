@@ -55,7 +55,7 @@ AP first:
     your device and the camera. Once connected to the Camera WiFi,
     open your web browser and navigate to the camera WiFi configuration page.
 
-    If your device supports mDNS, then use http://tokay.local as web
+    If your device supports mDNS, then use http://tokay-lite.local as web
     page address. If that fails or your devices isn't mDNS-aware, use
     direct IP address: http://192.168.4.1
 
@@ -81,7 +81,7 @@ centralized DNS server. This is particularly useful for locating
 the camera's web-based configuration interface.
 
 To check your camera's operation, follow these steps open your
-web browser and navigate to http://tokay.local.
+web browser and navigate to http://tokay-lite.local.
 
 In most cases, you can access the camera's web-based
 configuration page by simply entering "tokay-lite.local" in your
@@ -93,7 +93,7 @@ settings interface.
 If, for any reason, mDNS is not working on your network, you can
 alternatively find the camera's IP address by accessing your
 router's settings. This IP address can be used in place of
-"tokay.local" to access the camera's configuration page.
+"tokay-lite.local" to access the camera's configuration page.
 
 {{< /tip >}}
 

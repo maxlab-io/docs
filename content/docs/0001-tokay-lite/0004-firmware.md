@@ -48,7 +48,6 @@ Make sure you install correct version!
 
 In order to isntall ESP-IDF, please follow [the official Espressif guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/#installation).
 
-
 You also need to be familiar about building and developing projects using ESP-IDF
 tools, so it is stronly advised to complete [the Build Your First Project Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#build-your-first-project)
 
