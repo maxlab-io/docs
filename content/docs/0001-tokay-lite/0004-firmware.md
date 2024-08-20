@@ -41,7 +41,7 @@ to [building firmware locally guide](#esp-idf-native)
 
 {{< tip info >}}
 
-The Tokay Lite firmware is compatible only with v5.0 of ESP-IDF.
+The Tokay Lite firmware is compatible only with v5.3 of ESP-IDF.
 Make sure you install correct version!
 
 {{< /tip >}}
@@ -119,7 +119,7 @@ following steps.
    1. Proceed with building the firmware using Docker image:
 
        ```bash
-       docker run -it --rm -v $PWD:/project -w /project espressif/idf:v5.0 idf.py build -C webserver
+       docker run -it --rm -v $PWD:/project -w /project espressif/idf:v5.3 idf.py build -C webserver
        ```
 
 ### Flashing Firmware
@@ -147,7 +147,7 @@ following steps.
       discovered during previous step.
 
        ```bash
-       docker run -it --device=<TTY-USB-PATH>:/dev/ttyACM0 --rm -v $PWD:/project -w /project espressif/idf:v5.0 idf.py flash -C webserver
+       docker run -it --device=<TTY-USB-PATH>:/dev/ttyACM0 --rm -v $PWD:/project -w /project espressif/idf:v5.3 idf.py flash -C webserver
        ```
 
       The flashing should succeed now, you can release the PWR button
