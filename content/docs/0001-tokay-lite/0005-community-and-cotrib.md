@@ -20,8 +20,8 @@ This section is in-progress
 
 Both parts, hardware and firmware of the Tokay Lite project live on GitHub:
 
-* [Firmware repository](https://github.com/maxlab-io/tokay-lite-pcb)
-* [Hardware repository](https://github.com/maxlab-io/tokay-lite-sdk)
+* [Firmware repository](https://github.com/maxlab-io/tokay-lite-sdk)
+* [Hardware repository](https://github.com/maxlab-io/tokay-lite-pcb)
 
 ## Crowdsupply
 
