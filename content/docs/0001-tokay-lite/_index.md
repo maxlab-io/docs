@@ -11,8 +11,8 @@ url: "docs/edge-ai-tokay-lite"
 [Tokay Lite](https://maxlab.io/store/edge-ai-camera/) is the ESP32 camera development board ideal for low-power image
 processing applications on the edge.
 
-Tokay Lite can be used as standalone devkit to aid developers with a convinient
-tool or be embedded in the bigger system to augument it with the vision and
+Tokay Lite can be used as standalone devkit to aid developers with a convenient
+tool or be embedded in the bigger system to augment it with the vision and
 image processing data.
 
 ## Tokay Lite Features

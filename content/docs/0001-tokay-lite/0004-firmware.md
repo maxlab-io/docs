@@ -10,8 +10,8 @@ firmware for Tokay Lite cameras.
 
 ## Necessary Preparations {#preparations}
 
-First and foremost, you need to clone the Tokay Lite firmare repository.
-The repositry can be found on GitHub: https://github.com/maxlab-io/tokay-lite-sdk
+First and foremost, you need to clone the Tokay Lite firmware repository.
+The repository can be found on GitHub: https://github.com/maxlab-io/tokay-lite-sdk
 and be cloned as follows:
 
 ```bash
@@ -46,11 +46,11 @@ Make sure you install correct version!
 
 {{< /tip >}}
 
-In order to isntall ESP-IDF, please follow [the official Espressif guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/#installation).
+In order to install ESP-IDF, please follow [the official Espressif guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/#installation).
 
 
 You also need to be familiar about building and developing projects using ESP-IDF
-tools, so it is stronly advised to complete [the Build Your First Project Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#build-your-first-project)
+tools, so it is strongly advised to complete [the Build Your First Project Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#build-your-first-project)
 
 After ESP-IDF installation is complete, return back and proceed with
 following steps.
