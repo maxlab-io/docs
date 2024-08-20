@@ -92,13 +92,13 @@ following steps.
 
    The flashing should succeed now.
 
-## Build and Flash Via Docker
+## Build and Flash via Docker
 
    {{< tip "warning" >}}
 
    Docker installation may not work on all MacOS systems. If you're using Macbook
    as a development platform, it's recommended to install ESP-IDF and
-   [build Tokay Lite firmware natively](#esp-idf-native).
+   build Tokay Lite firmware natively.
 
    {{< /tip >}}
 
@@ -141,7 +141,7 @@ following steps.
        ```
 
    1. **Hold the PWR button again. Do not release the button until the flashing process
-      is complete**
+      is complete!**
 
    1. Run the following command, replacing `<TTY-USB-PATH>` with the tty path
       discovered during previous step.
